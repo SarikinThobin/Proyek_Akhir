@@ -146,36 +146,25 @@ section.active-section {
 
 /* Gaya dasar kotak fakta */
 .fakta-kotak {
-    background-color: #f8f9fa;
     border: 1px solid #dee2e6;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    color: black;
+    text-decoration: none;
     text-align: center;
     transition: all 0.3s ease;
     height: 100%;
   }
   
-  /* Efek saat di-hover */
-  .fakta-kotak:hover {
-    background-color: #ffe8c2;
-    transform: scale(1.05);
-    cursor: pointer;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-  }
+
   
   /* Ikon di atas teks */
   .fakta-kotak i {
     font-size: 2rem;
     margin-bottom: 10px;
     color: #ff9800;
+    display: grid;
+    
   }
   
-  /* Hilangkan garis bawah pada link */
-  .fakta-link {
-    text-decoration: none;
-    color: inherit;
-  }
 
 
 .fact-card:hover {
