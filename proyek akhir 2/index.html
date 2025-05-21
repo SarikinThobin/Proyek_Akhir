@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bahasa Banjar - Warisan Budaya Kalimantan</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Bahasa Banjar</h1>
+            <p>Warisan Budaya Kalimantan Selatan</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#sejarah">Sejarah</a></li>
+                <li><a href="#kosakata">Kosakata</a></li>
+                <li><a href="#game">Game</a></li>
+                <li><a href="#kontak">Kontak</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section id="home">
+            <h2>Selamat Datang di Website Bahasa Banjar</h2>
+            <p>Website ini didedikasikan untuk melestarikan dan mempromosikan Bahasa Banjar, bahasa daerah dari Kalimantan Selatan.</p>
+            <img src="images/banjar-culture.jpg" alt="Budaya Banjar" class="featured-image">
+        </section>
+
+        <section id="sejarah">
+            <h2>Sejarah Bahasa Banjar</h2>
+            <div class="history-content" id="history-content">
+                <!-- Konten sejarah akan diisi dari Firebase -->
+                <p>Memuat sejarah Bahasa Banjar...</p>
+            </div>
+        </section>
+
+        <section id="kosakata">
+            <h2>Kosakata Bahasa Banjar</h2>
+            <div class="vocabulary-list" id="vocabulary-list">
+                <!-- Daftar kosakata akan diisi dari JSON -->
+            </div>
+        </section>
+
+        <section id="game">
+            <h2>Game Mencocokkan Kata</h2>
+            <div class="game-container">
+                <div class="game-info">
+                    <p>Cocokkan kata dalam Bahasa Banjar dengan artinya dalam Bahasa Indonesia!</p>
+                    <p>Skor: <span id="score">0</span></p>
+                    <p>Sisa waktu: <span id="time">60</span> detik</p>
+                </div>
+                <div class="game-board" id="game-board">
+                    <!-- Game board akan diisi oleh JavaScript -->
+                </div>
+                <button id="start-game">Mulai Game</button>
+                <div id="game-result"></div>
+            </div>
+        </section>
+
+        <section id="kontak">
+            <h2>Kontak Kami</h2>
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="name">Nama:</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Pesan:</label>
+                    <textarea id="message" required></textarea>
+                </div>
+                <button type="submit">Kirim</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Website Bahasa Banjar. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>

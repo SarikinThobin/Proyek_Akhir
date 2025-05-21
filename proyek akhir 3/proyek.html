@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banjar Nusa - Budaya & Bahasa Banjar</title>
+    <style>
+        /* CSS Global */
+        :root {
+            --primary: #2c7873;
+            --secondary: #6fb98f;
+            --light: #f0f0f0;
+            --dark: #004445;
+            --accent: #ff9a3c;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--dark));
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+            background-image: url(WhatsApp\ Image\ 2025-05-17\ at\ 15.59.24_1ceaeb3b.jpg);
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Q50,80 0,100 Z" fill="rgba(255,255,255,0.1)"/></svg>');
+            background-size: cover;
+            opacity: 0.3;
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: var(--dark);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav li {
+            position: relative;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 1rem 1.5rem;
+            display: block;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            background-color: var(--primary);
+        }
+
+        nav li.active a {
+            background-color: var(--primary);
+            font-weight: 600;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+
+        section {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            transition: transform 0.3s ease;
+        }
+
+        section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2, h3 {
+            color: var(--dark);
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            border-bottom: 3px solid var(--accent);
+            display: inline-block;
+            padding-bottom: 0.5rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: var(--primary);
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            color: var(--secondary);
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        .highlight {
+            background-color: rgba(255, 154, 60, 0.2);
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-weight: 500;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent);
+            color: white;
+            padding: 0.7rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(255, 154, 60, 0.3);
+        }
+
+        .btn:hover {
+            background-color: #ff8a1c;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(255, 154, 60, 0.4);
+        }
+
+        .btn-secondary {
+            background-color: var(--secondary);
+            box-shadow: 0 4px 8px rgba(111, 185, 143, 0.3);
+        }
+
+        .btn-secondary:hover {
+            background-color: #5dab83;
+            box-shadow: 0 6px 12px rgba(111, 185, 143, 0.4);
+        }
+
+        /* Sejarah Section */
+        .timeline {
+            position: relative;
+            max-width: 1000px;
+            margin: 2rem auto;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: var(--secondary);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+            border-radius: 10px;
+        }
+
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            box-sizing: border-box;
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            background-color: white;
+            border: 4px solid var(--primary);
+            border-radius: 50%;
+            top: 15px;
+            z-index: 1;
+        }
+
+        .left {
+            left: 0;
+        }
+
+        .right {
+            left: 50%;
+        }
+
+        .left::after {
+            right: -12px;
+        }
+
+        .right::after {
+            left: -12px;
+        }
+
+        .timeline-content {
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-left: 4px solid var(--primary);
+        }
+
+        .right .timeline-content {
+            border-left: none;
+            border-right: 4px solid var(--primary);
+        }
+
+        /* Cerita Rakyat Section */
+        .stories-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .story-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .story-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .story-img {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .story-content {
+            padding: 1.5rem;
+        }
+
+        .story-content h3 {
+            margin-bottom: 0.5rem;
+            color: var(--dark);
+        }
+
+        .story-meta {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .read-more {
+            color: var(--primary);
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .read-more:hover {
+            text-decoration: underline;
+        }
+
+        .read-more::after {
+            content: '→';
+            margin-left: 5px;
+            transition: transform 0.3s ease;
+        }
+
+        .read-more:hover::after {
+            transform: translateX(3px);
+        }
+
+        /* Game Section */
+        .game-container {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .game-area {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 2rem;
+        }
+
+        .game-cards {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            margin-bottom: 2rem;
+            width: 100%;
+            max-width: 800px;
+        }
+
+        .card {
+            background-color: var(--light);
+            border-radius: 8px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+            transform-style: preserve-3d;
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .card.flipped {
+            background-color: white;
+            transform: rotateY(180deg);
+        }
+
+        .card.matched {
+            background-color: var(--secondary);
+            color: white;
+            transform: rotateY(180deg);
+            cursor: default;
+        }
+
+        .card-front, .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            padding: 1rem;
+        }
+
+        .card-front {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .card-back {
+            background-color: white;
+            transform: rotateY(180deg);
+            border: 2px solid var(--primary);
+        }
+
+        .game-info {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 800px;
+            margin-bottom: 1rem;
+            background-color: var(--light);
+            padding: 1rem;
+            border-radius: 8px;
+        }
+
+        .game-stats {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .stat {
+            background-color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-weight: 600;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            max-width: 500px;
+            width: 90%;
+            text-align: center;
+            animation: modalFadeIn 0.3s ease;
+        }
+
+        @keyframes modalFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 2rem;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+
+        .social-links a {
+            color: white;
+            background-color: rgba(255, 255, 255, 0.1);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background-color: var(--accent);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 2rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            nav li {
+                text-align: center;
+            }
+
+            .timeline::after {
+                left: 31px;
+            }
+
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+
+            .timeline-item::after {
+                left: 18px;
+            }
+
+            .left::after, .right::after {
+                left: 18px;
+            }
+
+            .right {
+                left: 0;
+            }
+
+            .left .timeline-content, .right .timeline-content {
+                border-left: 4px solid var(--primary);
+                border-right: none;
+            }
+
+            .game-cards {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.6s ease forwards;
+        }
+
+        .delay-1 {
+            animation-delay: 0.2s;
+        }
+
+        .delay-2 {
+            animation-delay: 0.4s;
+        }
+
+        .delay-3 {
+            animation-delay: 0.6s;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                Banjar<span>Nusa</span>
+            </div>
+            <p>Melestarikan Bahasa dan Budaya Banjar untuk Generasi Mendatang</p>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li class="active"><a href="#sejarah">Sejarah Bahasa</a></li>
+            <li><a href="#cerita">Cerita Rakyat</a></li>
+            <li><a href="#game">Game Bahasa</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section id="sejarah" class="fade-in">
+            <h1>Sejarah Bahasa Banjar</h1>
+            <p>Bahasa Banjar adalah bahasa yang dituturkan oleh suku Banjar di Kalimantan Selatan dan daerah sekitarnya. Bahasa ini memiliki sejarah panjang yang mencerminkan kekayaan budaya dan peradaban masyarakat Banjar.</p>
+            
+            <div class="timeline">
+                <div class="timeline-item left fade-in delay-1">
+                    <div class="timeline-content">
+                        <h3>Abad ke-13</h3>
+                        <p>Bahasa Banjar mulai terbentuk sebagai bahasa Melayu lokal yang dipengaruhi oleh bahasa Dayak dan bahasa Jawa Kuno. Masyarakat Hindu-Buddha di Kerajaan Negara Dipa dan Negara Daha menggunakan bahasa ini.</p>
+                    </div>
+                </div>
+                <div class="timeline-item right fade-in delay-1">
+                    <div class="timeline-content">
+                        <h3>Abad ke-16</h3>
+                        <p>Masuknya Islam ke Kalimantan Selatan membawa pengaruh Arab dan Persia ke dalam bahasa Banjar. Banyak kosakata agama dan budaya Islam diserap ke dalam bahasa ini.</p>
+                    </div>
+                </div>
+                <div class="timeline-item left fade-in delay-2">
+                    <div class="timeline-content">
+                        <h3>Abad ke-18</h3>
+                        <p>Bahasa Banjar mengalami perkembangan pesat sebagai lingua franca di wilayah Kalimantan. Bahasa ini digunakan dalam perdagangan, diplomasi, dan penyebaran agama.</p>
+                    </div>
+                </div>
+                <div class="timeline-item right fade-in delay-2">
+                    <div class="timeline-content">
+                        <h3>Abad ke-19</h3>
+                        <p>Kolonial Belanda mendokumentasikan bahasa Banjar dalam kamus dan tata bahasa. Bahasa Banjar mulai dipengaruhi oleh bahasa Belanda dalam bidang administrasi dan pendidikan.</p>
+                    </div>
+                </div>
+                <div class="timeline-item left fade-in delay-3">
+                    <div class="timeline-content">
+                        <h3>Era Modern</h3>
+                        <p>Bahasa Banjar tetap hidup sebagai bahasa ibu masyarakat Kalimantan Selatan dengan dua dialek utama: Banjar Kuala (kota) dan Banjar Hulu (pedalaman). Bahasa ini kini dilestarikan melalui media, sastra, dan pendidikan.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cerita" class="fade-in">
+            <h1>Cerita Rakyat Banjar</h1>
+            <p>Kekayaan budaya Banjar tercermin dalam cerita-cerita rakyat yang diwariskan turun-temurun. Berikut beberapa cerita rakyat Banjar yang populer:</p>
+            
+            <div class="stories-container">
+                <div class="story-card fade-in delay-1">
+                    <div class="story-img" style="background-image: url('https://via.placeholder.com/300x200?text=Legenda+Putri+Junjung+Buih');"></div>
+                    <div class="story-content">
+                        <h3>Legenda Putri Junjung Buih</h3>
+                        <p class="story-meta">Legenda • Populer</p>
+                        <p>Kisah tentang asal-usul Kerajaan Banjar yang dimulai dari seorang putri yang muncul dari buih di sungai.</p>
+                        <a href="#" class="read-more">Baca Selengkapnya</a>
+                    </div>
+                </div>
+                <div class="story-card fade-in delay-2">
+                    <div class="story-img" style="background-image: url('https://via.placeholder.com/300x200?text=Si+Pahit+Si+Manis');"></div>
+                    <div class="story-content">
+                        <h3>Si Pahit Si Manis</h3>
+                        <p class="story-meta">Fabel • Pendidikan</p>
+                        <p>Cerita tentang dua sahabat yang memiliki sifat bertolak belakang dan pelajaran tentang persahabatan sejati.</p>
+                        <a href="#" class="read-more">Baca Selengkapnya</a>
+                    </div>
+                </div>
+                <div class="story-card fade-in delay-3">
+                    <div class="story-img" style="background-image: url('https://via.placeholder.com/300x200?text=Asal+Mula+Danau+Lipan');"></div>
+                    <div class="story-content">
+                        <h3>Asal Mula Danau Lipan</h3>
+                        <p class="story-meta">Mitologi • Alam</p>
+                        <p>Legenda tentang terbentuknya sebuah danau yang dihuni oleh lipan raja berukuran besar.</p>
+                        <a href="#" class="read-more">Baca Selengkapnya</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="game" class="fade-in">
+            <h1>Game Mencocokkan Bahasa Banjar</h1>
+            <p>Uji pengetahuanmu tentang kosakata bahasa Banjar dengan game mencocokkan kata berikut!</p>
+            
+            <div class="game-container">
+                <div class="game-area">
+                    <div class="game-info">
+                        <div>
+                            <button id="start-btn" class="btn">Mulai Game</button>
+                        </div>
+                        <div class="game-stats">
+                            <div class="stat" id="moves">Langkah: 0</div>
+                            <div class="stat" id="timer">Waktu: 0s</div>
+                            <div class="stat" id="matches">Cocok: 0/8</div>
+                        </div>
+                    </div>
+                    <div class="game-cards" id="game-board">
+                        <!-- Kartu akan diisi oleh JavaScript -->
+                    </div>
+                    <button id="reset-btn" class="btn btn-secondary">Ulangi Game</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container footer-content">
+            <h2>BanjarNusa</h2>
+            <p>Melestarikan warisan budaya Banjar untuk generasi mendatang</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+            <p class="copyright">© 2023 BanjarNusa. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Modal untuk hasil game -->
+    <div id="result-modal" class="modal">
+        <div class="modal-content">
+            <h2 id="result-title">Selamat!</h2>
+            <p id="result-message">Anda berhasil menyelesaikan game dalam <span id="result-time">0</span> detik dengan <span id="result-moves">0</span> langkah!</p>
+            <button id="close-modal" class="btn">Tutup</button>
+        </div>
+    </div>
+
+    <script>
+        // Game Mencocokkan Kata
+        document.addEventListener('DOMContentLoaded', function() {
+            // Data kosakata Banjar-Indonesia
+            const vocabulary = [
+                { banjar: "Bubuhan", indonesia: "Kelompok/Komunitas" },
+                { banjar: "Guring", indonesia: "Tidur" },
+                { banjar: "Jajak", indonesia: "Telapak Kaki" },
+                { banjar: "Kada", indonesia: "Tidak" },
+                { banjar: "Lakas", indonesia: "Cepat" },
+                { banjar: "Mamang", indonesia: "Paman" },
+                { banjar: "Nang", indonesia: "Di" },
+                { banjar: "Pian", indonesia: "Kamu" },
+                { banjar: "Sahang", indonesia: "Cabai" },
+                { banjar: "Talu", indonesia: "Kalah" },
+                { banjar: "Ulang", indonesia: "Jangan" },
+                { banjar: "Wadah", indonesia: "Tempat" },
+                { banjar: "Yun", indonesia: "Dia (perempuan)" },
+                { banjar: "Amun", indonesia: "Kalau" },
+                { banjar: "Bubuh", indonesia: "Bubur" },
+                { banjar: "Cungul", indonesia: "Moncong" }
+            ];
+
+            // Pilih 8 kata acak dari vocabulary
+            const selectedWords = [];
+            while (selectedWords.length < 8) {
+                const randomIndex = Math.floor(Math.random() * vocabulary.length);
+                const word = vocabulary[randomIndex];
+                if (!selectedWords.some(w => w.banjar === word.banjar)) {
+                    selectedWords.push(word);
+                }
+            }
+
+            // Game state
+            let gameStarted = false;
+            let flippedCards = [];
+            let matchedPairs = 0;
+            let moves = 0;
+            let timer = 0;
+            let timerInterval;
+            const totalPairs = 8;
+
+            // Elemen DOM
+            const gameBoard = document.getElementById('game-board');
+            const movesDisplay = document.getElementById('moves');
+            const timerDisplay = document.getElementById('timer');
+            const matchesDisplay = document.getElementById('matches');
+            const startBtn = document.getElementById('start-btn');
+            const resetBtn = document.getElementById('reset-btn');
+            const resultModal = document.getElementById('result-modal');
+            const resultTitle = document.getElementById('result-title');
+            const resultMessage = document.getElementById('result-message');
+            const resultTime = document.getElementById('result-time');
+            const resultMoves = document.getElementById('result-moves');
+            const closeModal = document.getElementById('close-modal');
+
+            // Inisialisasi game board
+            function initializeBoard() {
+                gameBoard.innerHTML = '';
+                
+                // Buat array dari semua pasangan kata
+                const cards = [];
+                selectedWords.forEach(word => {
+                    cards.push({ type: 'banjar', content: word.banjar, pair: word.indonesia });
+                    cards.push({ type: 'indonesia', content: word.indonesia, pair: word.banjar });
+                });
+                
+                // Acak urutan kartu
+                shuffleArray(cards);
+                
+                // Buat elemen kartu
+                cards.forEach((card, index) => {
+                    const cardElement = document.createElement('div');
+                    cardElement.classList.add('card');
+                    cardElement.dataset.index = index;
+                    cardElement.dataset.content = card.content;
+                    cardElement.dataset.pair = card.pair;
+                    cardElement.dataset.type = card.type;
+                    
+                    const cardFront = document.createElement('div');
+                    cardFront.classList.add('card-front');
+                    cardFront.textContent = 'BanjarNusa';
+                    
+                    const cardBack = document.createElement('div');
+                    cardBack.classList.add('card-back');
+                    cardBack.textContent = card.content;
+                    
+                    cardElement.appendChild(cardFront);
+                    cardElement.appendChild(cardBack);
+                    
+                    cardElement.addEventListener('click', () => flipCard(cardElement));
+                    gameBoard.appendChild(cardElement);
+                });
+            }
+
+            // Fungsi untuk mengacak array
+            function shuffleArray(array) {
+                for (let i = array.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [array[i], array[j]] = [array[j], array[i]];
+                }
+                return array;
+            }
+
+            // Fungsi untuk membalik kartu
+            function flipCard(card) {
+                if (!gameStarted) {
+                    startGame();
+                }
+                
+                // Jangan biarkan kartu dibalik jika sudah cocok atau sudah terbuka
+                if (card.classList.contains('matched') || card.classList.contains('flipped')) {
+                    return;
+                }
+                
+                // Batasi hanya 2 kartu yang terbuka
+                if (flippedCards.length === 2) {
+                    return;
+                }
+                
+                // Balik kartu
+                card.classList.add('flipped');
+                flippedCards.push(card);
+                
+                // Cek jika 2 kartu terbuka
+                if (flippedCards.length === 2) {
+                    moves++;
+                    movesDisplay.textContent = `Langkah: ${moves}`;
+                    
+                    // Cek kecocokan
+                    const card1 = flippedCards[0];
+                    const card2 = flippedCards[1];
+                    
+                    if (card1.dataset.pair === card2.dataset.content && card1.dataset.content === card2.dataset.pair) {
+                        // Cocok
+                        card1.classList.add('matched');
+                        card2.classList.add('matched');
+                        flippedCards = [];
+                        matchedPairs++;
+                        matchesDisplay.textContent = `Cocok: ${matchedPairs}/${totalPairs}`;
+                        
+                        // Cek jika game selesai
+                        if (matchedPairs === totalPairs) {
+                            endGame();
+                        }
+                    } else {
+                        // Tidak cocok, balik kembali setelah 1 detik
+                        setTimeout(() => {
+                            card1.classList.remove('flipped');
+                            card2.classList.remove('flipped');
+                            flippedCards = [];
+                        }, 1000);
+                    }
+                }
+            }
+
+            // Mulai game
+            function startGame() {
+                if (!gameStarted) {
+                    gameStarted = true;
+                    moves = 0;
+                    matchedPairs = 0;
+                    timer = 0;
+                    movesDisplay.textContent = `Langkah: ${moves}`;
+                    matchesDisplay.textContent = `Cocok: ${matchedPairs}/${totalPairs}`;
+                    
+                    // Mulai timer
+                    timerInterval = setInterval(() => {
+                        timer++;
+                        timerDisplay.textContent = `Waktu: ${timer}s`;
+                    }, 1000);
+                }
+            }
+
+            // Akhiri game
+            function endGame() {
+                clearInterval(timerInterval);
+                
+                // Tampilkan hasil
+                resultTime.textContent = timer;
+                resultMoves.textContent = moves;
+                
+                // Beri pesan berdasarkan performa
+                if (moves <= 16) {
+                    resultTitle.textContent = "Luar Biasa!";
+                    resultMessage.textContent = `Anda berhasil menyelesaikan game dalam ${timer} detik dengan ${moves} langkah! Skor sempurna!`;
+                } else if (moves <= 24) {
+                    resultTitle.textContent = "Bagus!";
+                    resultMessage.textContent = `Anda berhasil menyelesaikan game dalam ${timer} detik dengan ${moves} langkah! Hampir sempurna!`;
+                } else {
+                    resultTitle.textContent = "Selamat!";
+                    resultMessage.textContent = `Anda berhasil menyelesaikan game dalam ${timer} detik dengan ${moves} langkah! Coba lagi untuk hasil lebih baik!`;
+                }
+                
+                resultModal.style.display = "flex";
+            }
+
+            // Reset game
+            function resetGame() {
+                // Hentikan timer
+                clearInterval(timerInterval);
+                
+                // Reset state
+                gameStarted = false;
+                flippedCards = [];
+                matchedPairs = 0;
+                moves = 0;
+                timer = 0;
+                
+                // Update display
+                movesDisplay.textContent = `Langkah: ${moves}`;
+                timerDisplay.textContent = `Waktu: ${timer}s`;
+                matchesDisplay.textContent = `Cocok: ${matchedPairs}/${totalPairs}`;
+                
+                // Inisialisasi ulang board
+                initializeBoard();
+            }
+
+            // Event listeners
+            startBtn.addEventListener('click', startGame);
+            resetBtn.addEventListener('click', resetGame);
+            closeModal.addEventListener('click', () => {
+                resultModal.style.display = "none";
+            });
+
+            // Tutup modal ketika klik di luar konten modal
+            resultModal.addEventListener('click', (e) => {
+                if (e.target === resultModal) {
+                    resultModal.style.display = "none";
+                }
+            });
+
+            // Inisialisasi awal
+            initializeBoard();
+
+            // Smooth scroll untuk navigasi
+            document.querySelectorAll('nav a').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Update active nav item
+                    document.querySelectorAll('nav li').forEach(li => {
+                        li.classList.remove('active');
+                    });
+                    this.parentElement.classList.add('active');
+                    
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 70,
+                        behavior: 'smooth'
+                    });
+                });
+            });
+
+            // Animasi saat scroll
+            const animateOnScroll = function() {
+                const sections = document.querySelectorAll('section');
+                
+                sections.forEach(section => {
+                    const sectionTop = section.getBoundingClientRect().top;
+                    const windowHeight = window.innerHeight;
+                    
+                    if (sectionTop < windowHeight - 100) {
+                        section.classList.add('fade-in');
+                    }
+                });
+            };
+
+            window.addEventListener('scroll', animateOnScroll);
+            animateOnScroll(); // Jalankan sekali saat load
+        });
+    </script>
+</body>
+</html>

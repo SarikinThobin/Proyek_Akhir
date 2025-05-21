@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "banjar": "Bubuhan",
+        "indonesia": "Kelompok/Keluarga",
+        "example": "Bubuhan kami handak baangkat ka Martapura."
+    },
+    {
+        "id": 2,
+        "banjar": "Gawi",
+        "indonesia": "Bekerja",
+        "example": "Urang nang rajin gawi pasti kaya."
+    },
+    {
+        "id": 3,
+        "banjar": "Jajak",
+        "indonesia": "Jejak",
+        "example": "Jajak bajangan kuitan di pasir."
+    },
+    {
+        "id": 4,
+        "banjar": "Kada",
+        "indonesia": "Tidak",
+        "example": "Aku kada handak makan nasi."
+    },
+    {
+        "id": 5,
+        "banjar": "Lalakon",
+        "indonesia": "Perjalanan",
+        "example": "Lalakun kami ka Banjarmasin lancar."
+    },
+    {
+        "id": 6,
+        "banjar": "Mamah",
+        "indonesia": "Ibu",
+        "example": "Mamah lagi masak di dapur."
+    },
+    {
+        "id": 7,
+        "banjar": "Paman",
+        "indonesia": "Bapak",
+        "example": "Paman handak ka pasar."
+    },
+    {
+        "id": 8,
+        "banjar": "Sahang",
+        "indonesia": "Cabai",
+        "example": "Makanan ini rancak pisan sahangnya."
+    },
+    {
+        "id": 9,
+        "banjar": "Tatang",
+        "indonesia": "Pegang",
+        "example": "Jangan tatang itu, panas!"
+    },
+    {
+        "id": 10,
+        "banjar": "Ulang",
+        "indonesia": "Jangan",
+        "example": "Ulang manangis, nanti mamah marah."
+    },
+    {
+        "id": 11,
+        "banjar": "Wadai",
+        "indonesia": "Kue",
+        "example": "Wadai ini buatan mamah."
+    },
+    {
+        "id": 12,
+        "banjar": "Yustan",
+        "indonesia": "Sekarang",
+        "example": "Yustan kami handak pulang."
+    }
+]

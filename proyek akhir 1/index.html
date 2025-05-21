@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budaya Banjar</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="WhatsApp_Image_2025-05-17_at_16.17.44_9f18144d-removebg-preview.png" alt="Logo Bahasa Banjar">
+            <h1>Bahasa Banjar</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" class="nav-link" data-section="home">Home</a></li>
+                <li><a href="#" class="nav-link" data-section="sejarah">Sejarah</a></li>
+                <li><a href="#" class="nav-link" data-section="cerita">Cerita Rakyat</a></li>
+                <li><a href="#" class="nav-link" data-section="game">Game Cocokan</a></li>
+                <li><a href="#" class="nav-link" data-section="kuis">Kuis</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="active-section">
+            <div class="hero">
+                <h2>Selamat Datang di Website Bahasa Banjar</h2>
+                <p>Jelajahi kekayaan budaya dan bahasa dari Kalimantan Selatan</p>
+                <button class="explore-btn">Mulai Jelajahi</button>
+            </div>
+            <div class="quick-facts">
+                <h3>Fakta Singkat Bahasa Banjar</h3>
+                <div class="facts-container">
+                    <div class="fact-card">
+                        <i class="fas fa-users"></i>
+                        <a href="index2.html" class="fakta-kotak">Dituturkan oleh lebih dari 3.5 juta orang</a>
+                        
+                    </div>
+                    <div class="fact-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Bahasa dominan di Kalimantan Selatan</p>
+                    </div>
+                    <div class="fact-card">
+                        <i class="fas fa-book"></i>
+                        <p>Memiliki banyak cerita rakyat menarik</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sejarah">
+            <h2>Sejarah Bahasa Banjar</h2>
+            <div class="history-content">
+                <div class="history-text">
+                    <p>Bahasa Banjar adalah bahasa Austronesia yang dituturkan oleh Suku Banjar di Kalimantan Selatan, Indonesia. Bahasa ini berkembang dari percampuran bahasa Melayu dengan bahasa-bahasa Dayak setempat.</p>
+                    <p>Sebagai bahasa perdagangan, Bahasa Banjar menyebar ke berbagai wilayah di Kalimantan dan bahkan mempengaruhi bahasa-bahasa daerah sekitarnya.</p>
+                </div>
+                <div class="history-image">
+                    <img src="WhatsApp Image 2025-05-17 at 21.36.19_a6a251b5.jpg" alt="Peta Penyebaran Bahasa Banjar">
+                </div>
+            </div>
+            <button class="show-stories-btn">Lihat Cerita Rakyat</button>
+        </section>
+
+        <section id="cerita">
+            <h2>Cerita Rakyat Banjar</h2>
+            <div class="story-container">
+                <div class="story-nav">
+                    <button class="story-btn active" data-story="batu-baangkat">Batu Baangkat</button>
+                    <button class="story-btn" data-story="lambung-mangkurat">Lambung Mangkurat</button>
+                    <button class="story-btn" data-story="putri-junjung-buih">Putri Junjung Buih</button>
+                </div>
+                <div class="story-content" id="batu-baangkat">
+                    <h3>Batu Baangkat</h3>
+                    <p>Alkisah, di sebuah kampung di Banjar, hiduplah seorang janda miskin dengan anaknya. Karena kemiskinan, sang ibu berniat menelantarkan anaknya di hutan. Namun setiap kali dia meninggalkan anaknya, batu-batu akan berteriak "Baangkat! Baangkat!" (angkat! angkat!) sehingga sang ibu kembali mengambil anaknya. Akhirnya sang ibu menyadari kesalahannya dan berjanji akan merawat anaknya dengan baik.</p>
+                </div>
+                <div class="story-content hidden" id="lambung-mangkurat">
+                    <h3>Lambung Mangkurat</h3>
+                    <p>Lambung Mangkurat adalah seorang patih dari Kerajaan Negara Dipa yang bijaksana. Suatu ketika, kerajaan dilanda wabah penyakit. Lambung Mangkurat melakukan tapa brata di sungai hingga muncul seorang putri dari buih yang kemudian menjadi ratu dan menyelamatkan kerajaan.</p>
+                </div>
+                <div class="story-content hidden" id="putri-jun jung-buih">
+                    <h3>Putri Junjung Buih</h3>
+                    <p>Putri Junjung Buih adalah putri yang muncul dari buih sungai sebagai jawaban atas tapa brata Lambung Mangkurat. Putri ini kemudian menjadi ratu pertama Kerajaan Negara Dipa dan dianggap sebagai leluhur raja-raja Banjar.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="game">
+            <h2>Game Cocokan Bahasa Banjar</h2>
+            <div class="game-container">
+                <div class="game-instructions">
+                    <p>Cocokkan kata dalam Bahasa Indonesia dengan terjemahannya dalam Bahasa Banjar!</p>
+                    <p>Skor: <span id="score">0</span></p>
+                </div>
+                <div class="matching-game">
+                    <div class="words-container">
+                        <div class="indonesian-words">
+                            <h4>Bahasa Indonesia</h4>
+                            <div class="word" draggable="true" data-word="makan">Makan</div>
+                            <div class="word" draggable="true" data-word="minum">Minum</div>
+                            <div class="word" draggable="true" data-word="tidur">Tidur</div>
+                            <div class="word" draggable="true" data-word="jalan">Jalan</div>
+                        </div>
+                        <div class="banjar-words">
+                            <h4>Bahasa Banjar</h4>
+                            <div class="word" draggable="true" data-word="minum">Manyukup</div>
+                            <div class="word" draggable="true" data-word="makan">Mamakan</div>
+                            <div class="word" draggable="true" data-word="jalan">Jalan</div>
+                            <div class="word" draggable="true" data-word="tidur">Tidur</div>
+                        </div>
+                    </div>
+                    <div class="matches-container">
+                        <h4>Pasangan yang Cocok</h4>
+                        <div class="matches-area"></div>
+                    </div>
+                </div>
+                <button class="reset-game-btn">Ulangi Game</button>
+            </div>
+        </section>
+
+        <section id="kuis">
+            <h2>Kuis Bahasa Banjar</h2>
+            <div class="quiz-container">
+                <div class="quiz-progress">
+                    Pertanyaan <span id="current-question">1</span> dari <span id="total-questions">5</span>
+                </div>
+                <div class="quiz-question">
+                    <h3 id="question-text">Apa arti kata "manyukup" dalam Bahasa Indonesia?</h3>
+                </div>
+                <div class="quiz-options">
+                    <button class="option-btn" data-option="1">Makan</button>
+                    <button class="option-btn" data-option="2">Minum</button>
+                    <button class="option-btn" data-option="3">Tidur</button>
+                    <button class="option-btn" data-option="4">Jalan</button>
+                </div>
+                <div class="quiz-feedback hidden">
+                    <p id="feedback-text"></p>
+                    <button class="next-question-btn">Pertanyaan Berikutnya</button>
+                </div>
+                <div class="quiz-result hidden">
+                    <h3 id="result-title">Hasil Kuis</h3>
+                    <p id="result-text">Kamu menjawab benar 3 dari 5 pertanyaan!</p>
+                    <button class="restart-quiz-btn">Ulangi Kuis</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h3>Tentang Kami</h3>
+                <p>Website ini dibuat untuk melestarikan dan memperkenalkan kekayaan bahasa dan budaya Banjar kepada generasi muda.</p>
+            </div>
+            <div class="footer-section links">
+                <h3>Tautan Cepat</h3>
+                <ul>
+                    <li><a href="#" data-section="home">Beranda</a></li>
+                    <li><a href="#" data-section="sejarah">Sejarah</a></li>
+                    <li><a href="#" data-section="cerita">Cerita Rakyat</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact">
+                <h3>Kontak</h3>
+                <p><i class="fas fa-envelope"></i> mubarak23@gmail.com.com</p>
+                <p><i class="fas fa-envelope"></i> sarikinthobingmail.com</p>
+                <p><i class="fas fa-envelope"></i> Raply@gmail.com</p>
+                <div class="socials">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2025 Budaya Banjar Dibuat dengan <i class="fas fa-heart"></i> untuk Kalimantan Selatan
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

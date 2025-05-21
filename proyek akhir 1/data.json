@@ -1,0 +1,73 @@
+{
+    "sejarah": {
+        "judul": "Sejarah Bahasa Banjar",
+        "konten": "Bahasa Banjar adalah bahasa Austronesia yang dituturkan oleh Suku Banjar di Kalimantan Selatan, Indonesia. Bahasa ini berkembang dari percampuran bahasa Melayu dengan bahasa-bahasa Dayak setempat. Sebagai bahasa perdagangan, Bahasa Banjar menyebar ke berbagai wilayah di Kalimantan dan bahkan mempengaruhi bahasa-bahasa daerah sekitarnya."
+    },
+    "cerita_rakyat": [
+        {
+            "judul": "Batu Baangkat",
+            "konten": "Alkisah, di sebuah kampung di Banjar, hiduplah seorang janda miskin dengan anaknya. Karena kemiskinan, sang ibu berniat menelantarkan anaknya di hutan. Namun setiap kali dia meninggalkan anaknya, batu-batu akan berteriak 'Baangkat! Baangkat!' (angkat! angkat!) sehingga sang ibu kembali mengambil anaknya. Akhirnya sang ibu menyadari kesalahannya dan berjanji akan merawat anaknya dengan baik."
+        },
+        {
+            "judul": "Lambung Mangkurat",
+            "konten": "Lambung Mangkurat adalah seorang patih dari Kerajaan Negara Dipa yang bijaksana. Suatu ketika, kerajaan dilanda wabah penyakit. Lambung Mangkurat melakukan tapa brata di sungai hingga muncul seorang putri dari buih yang kemudian menjadi ratu dan menyelamatkan kerajaan."
+        },
+        {
+            "judul": "Putri Junjung Buih",
+            "konten": "Putri Junjung Buih adalah putri yang muncul dari buih sungai sebagai jawaban atas tapa brata Lambung Mangkurat. Putri ini kemudian menjadi ratu pertama Kerajaan Negara Dipa dan dianggap sebagai leluhur raja-raja Banjar."
+        }
+    ],
+    "kosakata": [
+        {
+            "indonesia": "Makan",
+            "banjar": "Mamakan"
+        },
+        {
+            "indonesia": "Minum",
+            "banjar": "Manyukup"
+        },
+        {
+            "indonesia": "Tidur",
+            "banjar": "Tidur"
+        },
+        {
+            "indonesia": "Jalan",
+            "banjar": "Jalan"
+        },
+        {
+            "indonesia": "Rumah",
+            "banjar": "Rumah"
+        },
+        {
+            "indonesia": "Air",
+            "banjar": "Banyu"
+        }
+    ],
+    "kuis": [
+        {
+            "pertanyaan": "Apa arti kata 'manyukup' dalam Bahasa Indonesia?",
+            "pilihan": ["Makan", "Minum", "Tidur", "Jalan"],
+            "jawaban": 2
+        },
+        {
+            "pertanyaan": "Kata 'guring' dalam Bahasa Banjar artinya...",
+            "pilihan": ["Lapar", "Makan", "Tidur", "Marah"],
+            "jawaban": 3
+        },
+        {
+            "pertanyaan": "Apa arti 'kada' dalam Bahasa Indonesia?",
+            "pilihan": ["Boleh", "Tidak", "Mau", "Sudah"],
+            "jawaban": 2
+        },
+        {
+            "pertanyaan": "'Bubuhan' dalam Bahasa Banjar merujuk pada...",
+            "pilihan": ["Keluarga", "Teman", "Tetangga", "Semua orang"],
+            "jawaban": 1
+        },
+        {
+            "pertanyaan": "Apa arti 'handak' dalam Bahasa Indonesia?",
+            "pilihan": ["Mau", "Tidak mau", "Pergi", "Datang"],
+            "jawaban": 1
+        }
+    ]
+}
